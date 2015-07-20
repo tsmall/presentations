@@ -1,13 +1,20 @@
 const colors = {
-  primary: "#f9c300",
-  secondary: "black",
-  tertiary: "white"
+  primary: "white",
+  secondary: "white",
+  tertiary: "orange",
+
+  background: "black",
+
+  orange: "orange",
+  blue: "blue",
+  green: "green",
+  red: "red"
 };
 
 const fonts = {
-  primary: "Open Sans Condensed",
-  secondary: "Lobster Two",
-  tertiary: "monospace"
+  primary: "Concourse T2",
+  alternate: "Concourse C2",
+  mono: "Triplicate T4c"
 };
 
 module.exports = {
@@ -15,7 +22,7 @@ module.exports = {
   fonts: fonts,
   global: {
     body: {
-      background: colors.primary,
+      background: colors.background,
       fontFamily: fonts.primary,
       fontWeight: "normal",
       fontSize: "2em",
@@ -134,7 +141,7 @@ module.exports = {
         margin: "auto",
         fontSize: "1em",
         fontWeight: "normal",
-        fontFamily: fonts.tertiary,
+        fontFamily: fonts.mono,
         minWidth: "100%",
         maxWidth: 800
       },
@@ -147,7 +154,7 @@ module.exports = {
     code: {
       color: "black",
       fontSize: "2.66em",
-      fontFamily: fonts.tertiary,
+      fontFamily: fonts.mono,
       margin: "0.25em auto",
       backgroundColor: "rgba(0,0,0,0.15)",
       padding: "0 10px",
@@ -155,52 +162,52 @@ module.exports = {
     },
     heading: {
       h1: {
-        color: colors.tertiary,
+        color: colors.primary,
         fontSize: "7.05em",
         fontFamily: fonts.primary,
         lineHeight: 1,
-        fontWeight: "bold",
+        fontWeight: "200",
         margin: 0,
         zoom: 1
       },
       h2: {
-        color: colors.secondary,
+        color: colors.primary,
         fontSize: "5.88em",
         fontFamily: fonts.primary,
         lineHeight: 1,
-        fontWeight: "bold",
+        fontWeight: "200",
         margin: 0
       },
       h3: {
-        color: "black",
+        color: colors.primary,
         fontSize: "4.9em",
-        fontFamily: fonts.secondary,
+        fontFamily: fonts.primary,
         lineHeight: 1,
-        fontWeight: "bold",
+        fontWeight: "200",
         margin: "0.5em auto"
       },
       h4: {
-        color: "black",
+        color: colors.primary,
         fontSize: "3.82em",
         fontFamily: fonts.primary,
         lineHeight: 1,
-        fontWeight: "bold",
+        fontWeight: "200",
         margin: "0.5em auto"
       },
       h5: {
-        color: "black",
+        color: colors.primary,
         fontSize: "3.19em",
         fontFamily: fonts.primary,
         lineHeight: 1,
-        fontWeight: "bold",
+        fontWeight: "200",
         margin: "0.5em auto"
       },
       h6: {
-        color: "black",
+        color: colors.primary,
         fontSize: "2.66em",
         fontFamily: fonts.primary,
         lineHeight: 1,
-        fontWeight: "bold",
+        fontWeight: "200",
         margin: "0.5em auto"
       }
     },
@@ -223,7 +230,7 @@ module.exports = {
       strikethrough: {}
     },
     text: {
-      color: "black",
+      color: colors.primary,
       fontSize: "2.66em",
       fontFamily: fonts.primary,
       margin: "0.25em auto"
