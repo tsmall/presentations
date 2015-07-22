@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "alt": "^0.16.10",
+    "flux": "^2.0.3",
     "highlight.js": "^8.6.0",
     "hjs-webpack": "^2.8.1",
     "lodash": "^3.9.3",

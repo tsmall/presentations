@@ -13,6 +13,9 @@ import preloader from "../src/utils/preloader";
 
 // preloader([images.kat]);
 
+// Live Examples
+var TimerApp = require("./live/timer/views/timerapp");
+
 export default class extends React.Component {
   render() {
     return (
@@ -244,6 +247,12 @@ export default class extends React.Component {
             lang="javascript"
             source={require("raw!./examples/countdown/dispatchers/appdispatcher.example")}/>
          </Slide>
+        <Slide>
+         <Heading size={1}>
+           Live Timer App
+         </Heading>
+         <TimerApp/>
+       </Slide>
       </Deck>
     );
   }

@@ -12,3 +12,19 @@ _:-moz-tree-row(hover), .spectacle-deck {
 _:-moz-tree-row(hover), ul .appear {
   display: inline;
 }
+
+/* Live Examples */
+
+.timer-app {
+  background-color: white;
+  color: black;
+  font-size: 3em;
+
+  padding: 10px;
+  width: 650px;
+  margin: 20px auto;
+}
+
+.timer-app button {
+  margin: 10px;
+}
