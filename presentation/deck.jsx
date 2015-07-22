@@ -7,11 +7,15 @@ import {
 
 import preloader from "../src/utils/preloader";
 
-// const images = {
-//   kat: require("./kat.png")
-// };
+const images = {
+  flux1: require("./images/flux.001.jpg"),
+  flux2: require("./images/flux.002.jpg"),
+  flux3: require("./images/flux.003.jpg"),
+  flux4: require("./images/flux.004.jpg"),
+  flux5: require("./images/flux.005.jpg")
+};
 
-// preloader([images.kat]);
+preloader([images.flux1, images.flux2, images.flux3, images.flux4]);
 
 // Live Examples
 var TimerApp = require("./live/timer/views/app");
@@ -194,9 +198,19 @@ export default class extends React.Component {
           </List>
         </Slide>
         <Slide>
-          <Heading size={1}>
-            [Diagram goes here]
-          </Heading>
+          <Image src={images.flux1.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.flux2.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.flux3.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.flux4.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.flux5.replace('/', '')} width="1600px"/>
         </Slide>
 
         <Slide notes="Let's walk through a simple example.<br/>App that counts down from 5 seconds.<br/>Will go through all four parts.">
