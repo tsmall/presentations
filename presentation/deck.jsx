@@ -231,19 +231,19 @@ export default class extends React.Component {
             source={require("raw!./examples/timer/stores/timer.example")}/>
         </Slide>
         <Slide>
-         <Text textAlign="left">
-            <pre>dispatchers/appdispatcher.js</pre>
+          <Text textAlign="left">
+             <pre>dispatchers/appdispatcher.js</pre>
           </Text>
           <CodePane
             lang="javascript"
             source={require("raw!./examples/timer/dispatchers/appdispatcher.example")}/>
         </Slide>
         <Slide>
-         <Heading size={1}>
-           Live Timer App
-         </Heading>
-         <TimerApp/>
-       </Slide>
+          <Heading size={1}>
+            Live Timer App
+          </Heading>
+          <TimerApp/>
+        </Slide>
       </Deck>
     );
   }
