@@ -25,7 +25,7 @@ var TimerApp = React.createClass({
   },
 
   _resetTimer: function() {
-    TimerActions.setTimer(25);
+    TimerActions.setTimer(5);
   }
 
 });
