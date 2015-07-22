@@ -18,6 +18,11 @@ class S extends React.Component {
     if (this.props.type.indexOf("italic") !== -1) {
       styles = assign(styles, {fontStyle: "italic"});
     }
+
+    if (this.props.color) {
+      styles = assign(styles, {color: this.context.styles.colors[this.props.color]});
+    }
+
     return (
       <span style={[styles, this.context.styles.components.s[this.props.type]]}>
         {this.props.children}

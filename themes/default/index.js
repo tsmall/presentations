@@ -5,10 +5,11 @@ const colors = {
 
   background: "black",
 
-  orange: "orange",
-  blue: "blue",
-  green: "green",
-  red: "red"
+  orange: "rgb(247, 213, 151)",
+  blue: "rgb(195, 212, 244)",
+  green: "rgb(181, 236, 184)",
+  red: "rgb(229, 138, 138)",
+  yellow: "rgb(253, 252, 163)"
 };
 
 const fonts = {

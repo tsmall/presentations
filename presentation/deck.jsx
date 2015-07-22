@@ -27,39 +27,39 @@ export default class extends React.Component {
         </Slide>
         <Slide notes="I'm Tom Small. I'm a Software Architect here at Offerpop.">
           <Heading size={1}>
-            About <S type="bold">me</S>
+            About <S type="bold" color="blue">me</S>
           </Heading>
         </Slide>
         <Slide notes="Who is using React? Who has used Flux?">
           <Heading size={1}>
-            About <S type="bold">you</S>
+            About <S type="bold" color="blue">you</S>
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            What is <S type="bold">Flux</S>?
+            What is <S type="bold" color="green">Flux</S>?
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            Architectural <S type="bold">pattern</S>
+            Architectural <S type="bold" color="orange">pattern</S>
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            Like <S type="bold">MVC</S>,<br/>
+            Like <S type="bold" color="red">MVC</S>,<br/>
             only different
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            Not a <S type="bold">library</S><br/>
-            or <S type="bold">framework</S>
+            Not a <S type="bold" color="blue">library</S><br/>
+            or <S type="bold" color="blue">framework</S>
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            Plain old <S type="bold">JavaScript</S>
+            Plain old <S type="bold" color="green">JavaScript</S>
           </Heading>
           <Heading size={3}>
             (POJS)
@@ -67,17 +67,17 @@ export default class extends React.Component {
         </Slide>
         <Slide>
           <Heading size={1}>
-            React <S type="bold">not required</S>
+            React <S type="bold" color="orange">not required</S>
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            Why create <S type="bold">another</S> architecture?
+            Why create <S type="bold" color="yellow">another</S> architecture?
           </Heading>
         </Slide>
         <Slide>
           <Heading size={1}>
-            Facebook ran into <S type="bold">problems</S><br/>
+            Facebook ran into <S type="bold" color="red">problems</S><br/>
             using MVC
           </Heading>
         </Slide>
@@ -86,7 +86,7 @@ export default class extends React.Component {
             Problem:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">Two-way</S> data binding
+            <S type="bold" color="red">Two-way</S> data binding
           </Heading>
           <List>
             <ListItem><Appear>Hard to know what made a change</Appear></ListItem>
@@ -98,7 +98,7 @@ export default class extends React.Component {
             Solution:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">One-way</S> data flow
+            <S type="bold" color="green">One-way</S> data flow
           </Heading>
           <List>
             <ListItem><Appear>Easier to trace execution in code</Appear></ListItem>
@@ -110,7 +110,7 @@ export default class extends React.Component {
             Problem:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">Mutable</S> objects
+            <S type="bold" color="red">Mutable</S> objects
           </Heading>
           <List>
             <ListItem><Appear>Accidental side-effects</Appear></ListItem>
@@ -122,7 +122,7 @@ export default class extends React.Component {
             Solution:
           </Heading>
           <Heading size={3} textAlign="left">
-            Designed for <S type="bold">immutable</S> data
+            Designed for <S type="bold" color="green">immutable</S> data
           </Heading>
           <List>
             <ListItem><Appear>Side-effect are explicit (look for <code>=</code>)</Appear></ListItem>
@@ -131,7 +131,7 @@ export default class extends React.Component {
         </Slide>
         <Slide notes="Four parts to Flux">
           <Heading size={1}>
-            <S type="bold">Diving in</S> to the details
+            <S type="bold" color="orange">Diving in</S> to the details
           </Heading>
         </Slide>
         <Slide>
@@ -139,7 +139,7 @@ export default class extends React.Component {
             Part #1:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">Views</S>
+            <S type="bold" color="blue">Views</S>
           </Heading>
           <List>
             <ListItem><Appear>React view objects</Appear></ListItem>
@@ -151,7 +151,7 @@ export default class extends React.Component {
             Part #2:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">Actions</S>
+            <S type="bold" color="yellow">Actions</S>
           </Heading>
           <List>
             <ListItem><Appear>Notifications of events</Appear></ListItem>
@@ -165,7 +165,7 @@ export default class extends React.Component {
             Part #3:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">Stores</S>
+            <S type="bold" color="orange">Stores</S>
           </Heading>
           <List>
             <ListItem><Appear>Respond to actions</Appear></ListItem>
@@ -179,7 +179,7 @@ export default class extends React.Component {
             Part #4:
           </Heading>
           <Heading size={3} textAlign="left">
-            <S type="bold">Dispatcher</S>
+            <S type="bold" color="green">Dispatcher</S>
           </Heading>
           <List>
             <ListItem><Appear>Routes actions to stores</Appear></ListItem>
@@ -195,7 +195,7 @@ export default class extends React.Component {
         </Slide>
         <Slide>
           <Heading size={1}>
-            <S type="bold">Example</S>: Countdown timer
+            <S type="bold" color="orange">Example</S>: Countdown timer
           </Heading>
         </Slide>
         <Slide>
