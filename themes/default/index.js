@@ -218,6 +218,7 @@ module.exports = {
       margin: "0.5em auto"
     },
     link: {
+      color: colors.blue,
       textDecoration: "none"
     },
     listItem: {

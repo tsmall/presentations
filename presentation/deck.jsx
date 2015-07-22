@@ -244,6 +244,64 @@ export default class extends React.Component {
           </Heading>
           <TimerApp/>
         </Slide>
+        <Slide>
+          <Heading size={1}>
+            <S type="bold" color="orange">Example</S>: Pomodoro timer
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={1}>
+            [Second example goes here]
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} textAlign="left" margin="0 0 -40px 0">
+            References:
+          </Heading>
+          <Heading size={3} textAlign="left">
+            <S type="bold" color="green">Learning more</S>
+          </Heading>
+          <List>
+            <ListItem><Link href="http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome">Removing User Interface Complexity, or Why React is Awesome</Link></ListItem>
+            <ListItem><Link href="https://facebook.github.io/flux/">Facebook's Flux project page</Link></ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={4} textAlign="left" margin="0 0 -40px 0">
+            References:
+          </Heading>
+          <Heading size={3} textAlign="left">
+            <S type="bold" color="orange">Beyond the basics</S>
+          </Heading>
+          <List>
+            <ListItem><Link href="https://medium.com/@dan_abramov/the-evolution-of-flux-frameworks-6c16ad26bb31">The Evolution of Flux Frameworks</Link></ListItem>
+            <ListItem><Link href="https://github.com/evancz/elm-architecture-tutorial">The Elm Architecture</Link></ListItem>
+            <ListItem><Link href="https://github.com/gaearon/redux">Redux</Link></ListItem>
+            <ListItem><Link href="https://github.com/omcljs/om">Om</Link></ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={4} textAlign="left" margin="0 0 -40px 0">
+            References:
+          </Heading>
+          <Heading size={3} textAlign="left">
+            <S type="bold" color="yellow">Other cool stuff</S>
+          </Heading>
+          <List>
+            <ListItem><Link href="https://facebook.github.io/react/blog/2015/02/20/introducing-relay-and-graphql.html">Introducing Relay and GraphQL</Link></ListItem>
+            <ListItem><Link href="https://github.com/FormidableLabs/spectacle">Spectacle</Link></ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={1}>
+            Questions?
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={1}>
+            Thank you!
+          </Heading>
+        </Slide>
       </Deck>
     );
   }
