@@ -148,11 +148,11 @@ module.exports = {
       code: {
         textAlign: "left",
         padding: 20,
+        fontFamily: fonts.mono,
         fontWeight: "normal"
       }
     },
     code: {
-      color: "black",
       fontSize: "2.66em",
       fontFamily: fonts.mono,
       margin: "0.25em auto",
