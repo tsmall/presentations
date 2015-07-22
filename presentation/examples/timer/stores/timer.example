@@ -5,6 +5,7 @@ var AppDispatcher = require('../dispatchers/appdispatcher.js');
 var BaseStore = require('./base.js');
 
 var secondsRemaining = 0;
+var isDone = false;
 var intervalHandle = null;
 
 function startTimer() {
@@ -17,12 +18,14 @@ function stopTimer() {
 }
 
 function tick() {
-  if (secondsRemaining === 0) {
+  secondsRemaining -= 1;
+
+  if (secondsRemaining <= 0) {
+    secondsRemaining = 0;
+    isDone = true;
     stopTimer();
-    return;
   }
 
-  secondsRemaining -= 1;
   TimerStore.emitChange();
 }
 
@@ -30,6 +33,10 @@ var TimerStore = assign({}, BaseStore, {
 
   getSecondsRemaining: function() {
     return secondsRemaining;
+  },
+
+  isDone: function() {
+    return isDone;
   }
 
 });
@@ -39,6 +46,7 @@ TimerStore.dispatchToken = AppDispatcher.register(function(action) {
     case ActionConstants.SET_TIMER:
       stopTimer();
       secondsRemaining = action.seconds;
+      isDone = false;
       TimerStore.emitChange();
       break;
 

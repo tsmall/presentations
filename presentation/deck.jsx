@@ -15,6 +15,7 @@ import preloader from "../src/utils/preloader";
 
 // Live Examples
 var TimerApp = require("./live/timer/views/app");
+var PomodoroApp = require("./live/pomodoro/views/app");
 
 export default class extends React.Component {
   render() {
@@ -25,6 +26,7 @@ export default class extends React.Component {
             Dive Into Flux
           </Heading>
         </Slide>
+
         <Slide notes="I'm Tom Small. I'm a Software Architect here at Offerpop.">
           <Heading size={1}>
             About <S type="bold" color="blue">me</S>
@@ -35,6 +37,7 @@ export default class extends React.Component {
             About <S type="bold" color="blue">you</S>
           </Heading>
         </Slide>
+
         <Slide>
           <Heading size={1}>
             What is <S type="bold" color="green">Flux</S>?
@@ -70,6 +73,7 @@ export default class extends React.Component {
             React <S type="bold" color="orange">not required</S>
           </Heading>
         </Slide>
+
         <Slide>
           <Heading size={1}>
             Why create <S type="bold" color="yellow">another</S> architecture?
@@ -129,6 +133,7 @@ export default class extends React.Component {
             <ListItem><Appear>Safe to share</Appear></ListItem>
           </List>
         </Slide>
+
         <Slide notes="Four parts to Flux">
           <Heading size={1}>
             <S type="bold" color="orange">Diving in</S> to the details
@@ -193,6 +198,7 @@ export default class extends React.Component {
             [Diagram goes here]
           </Heading>
         </Slide>
+
         <Slide>
           <Heading size={1}>
             <S type="bold" color="orange">Example</S>: Countdown timer
@@ -208,11 +214,11 @@ export default class extends React.Component {
         </Slide>
         <Slide>
          <Text textAlign="left">
-            <pre>views/timerapp.jsx</pre>
+            <pre>views/app.jsx</pre>
           </Text>
           <CodePane
             lang="javascript"
-            source={require("raw!./examples/timer/views/timerapp.example")}/>
+            source={require("raw!./examples/timer/views/app.example")}/>
         </Slide>
         <Slide>
          <Text textAlign="left">
@@ -244,16 +250,51 @@ export default class extends React.Component {
           </Heading>
           <TimerApp/>
         </Slide>
+
         <Slide>
           <Heading size={1}>
             <S type="bold" color="orange">Example</S>: Pomodoro timer
           </Heading>
         </Slide>
         <Slide>
-          <Heading size={1}>
-            [Second example goes here]
-          </Heading>
+         <Text textAlign="left">
+            <pre>views/app.jsx</pre>
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/pomodoro/views/app.example")}/>
         </Slide>
+        <Slide>
+         <Text textAlign="left">
+            <pre>views/pomodoro.jsx</pre>
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/pomodoro/views/pomodoro.example")}/>
+        </Slide>
+        <Slide>
+         <Text textAlign="left">
+            <pre>actions/pomodoro.js</pre>
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/pomodoro/actions/pomodoro.example")}/>
+        </Slide>
+        <Slide>
+         <Text textAlign="left">
+            <pre>stores/pomodoro.js</pre>
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/pomodoro/stores/pomodoro.example")}/>
+        </Slide>
+        <Slide>
+          <Heading size={1}>
+            Live Pomodoro App
+          </Heading>
+          <PomodoroApp/>
+        </Slide>
+
         <Slide>
           <Heading size={4} textAlign="left" margin="0 0 -40px 0">
             References:
