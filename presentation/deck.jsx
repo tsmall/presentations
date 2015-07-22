@@ -14,7 +14,7 @@ import preloader from "../src/utils/preloader";
 // preloader([images.kat]);
 
 // Live Examples
-var TimerApp = require("./live/timer/views/timerapp");
+var TimerApp = require("./live/timer/views/app");
 
 export default class extends React.Component {
   render() {

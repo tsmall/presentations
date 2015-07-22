@@ -18,14 +18,16 @@ var Timer = React.createClass({
   },
 
   render: function() {
+    var displayText = this.state.isDone ? "Done!" : Formatters.formatTime(this.state.secondsRemaining);
     return (
-      <div>{Formatters.formatTime(this.state.secondsRemaining)}</div>
+      <div>{displayText}</div>
     );
   },
 
   _loadState: function() {
     return {
-      secondsRemaining: TimerStore.getSecondsRemaining()
+      secondsRemaining: TimerStore.getSecondsRemaining(),
+      isDone: TimerStore.isDone()
     };
   },
 
