@@ -204,49 +204,40 @@ export default class extends React.Component {
           </Text>
           <CodePane
             lang="javascript"
-            source={require("raw!./examples/countdown/views/timer.example")}/>
-         </Slide>
+            source={require("raw!./examples/timer/views/timer.example")}/>
+        </Slide>
         <Slide>
          <Text textAlign="left">
             <pre>views/timerapp.jsx</pre>
           </Text>
           <CodePane
             lang="javascript"
-            source={require("raw!./examples/countdown/views/timerapp.example")}/>
-         </Slide>
+            source={require("raw!./examples/timer/views/timerapp.example")}/>
+        </Slide>
         <Slide>
          <Text textAlign="left">
             <pre>actions/timer.js</pre>
           </Text>
           <CodePane
             lang="javascript"
-            source={require("raw!./examples/countdown/actions/timer.example")}/>
-         </Slide>
+            source={require("raw!./examples/timer/actions/timer.example")}/>
+        </Slide>
         <Slide>
          <Text textAlign="left">
             <pre>stores/timer.js</pre>
           </Text>
-          <Layout>
-            <Fill>
-              <CodePane
-                lang="javascript"
-                source={require("raw!./examples/countdown/stores/timer.top.example")}/>
-            </Fill>
-            <Fill>
-              <CodePane
-                lang="javascript"
-                source={require("raw!./examples/countdown/stores/timer.bottom.example")}/>
-            </Fill>
-          </Layout>
-         </Slide>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/timer/stores/timer.example")}/>
+        </Slide>
         <Slide>
          <Text textAlign="left">
             <pre>dispatchers/appdispatcher.js</pre>
           </Text>
           <CodePane
             lang="javascript"
-            source={require("raw!./examples/countdown/dispatchers/appdispatcher.example")}/>
-         </Slide>
+            source={require("raw!./examples/timer/dispatchers/appdispatcher.example")}/>
+        </Slide>
         <Slide>
          <Heading size={1}>
            Live Timer App

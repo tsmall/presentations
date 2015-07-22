@@ -144,7 +144,8 @@ module.exports = {
         fontWeight: "normal",
         fontFamily: fonts.mono,
         minWidth: "100%",
-        maxWidth: 800
+        maxWidth: 800,
+        maxHeight: 850
       },
       code: {
         textAlign: "left",
