@@ -1,38 +1,25 @@
-var React = require('react');
 var PomodoroStore = require('../stores/pomodoro.js');
+var React = require('react');
 var Timer = require('./timer.jsx');
 
 var PomodoroTimer = React.createClass({
 
-  getInitialState: function() {
-    return this._loadState();
-  },
-
-  componentDidMount: function() {
-    PomodoroStore.addChangeListener(this._onChange);
-  },
-
-  componentWillUnmount: function() {
-    PomodoroStore.removeChangeListener(this._onChange);
+  propTypes: {
+    currentStage: React.PropTypes.string.isRequired,
+    isDone: React.PropTypes.bool.isRequired,
+    secondsRemaining: React.PropTypes.number.isRequired
   },
 
   render: function() {
     return (
       <div>
-        <div>{this.state.currentStage}</div>
-        <Timer/>
+        <div>{this.props.currentStage}</div>
+        <Timer
+          isDone={this.props.isDone}
+          secondsRemaining={this.props.secondsRemaining}
+          />
       </div>
     );
-  },
-
-  _loadState: function() {
-    return {
-      currentStage: PomodoroStore.getCurrentStage()
-    };
-  },
-
-  _onChange: function() {
-    this.setState(this._loadState());
   }
 
 });

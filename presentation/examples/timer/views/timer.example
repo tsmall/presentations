@@ -1,38 +1,18 @@
-var React = require('react');
-
-var TimerStore = require('../stores/timer.js');
 var Formatters = require('../utils/formatters.js');
+var React = require('react');
 
 var Timer = React.createClass({
 
-  getInitialState: function() {
-    return this._loadState();
-  },
-
-  componentDidMount: function() {
-    TimerStore.addChangeListener(this._onChange);
-  },
-
-  componentWillUnmount: function() {
-    TimerStore.removeChangeListener(this._onChange);
+  propTypes: {
+    isDone: React.PropTypes.bool.isRequired,
+    secondsRemaining: React.PropTypes.number.isRequired
   },
 
   render: function() {
-    var displayText = this.state.isDone ? "Done!" : Formatters.formatTime(this.state.secondsRemaining);
+    var displayText = this.props.isDone ? "Done!" : Formatters.formatTime(this.props.secondsRemaining);
     return (
       <div>{displayText}</div>
     );
-  },
-
-  _loadState: function() {
-    return {
-      secondsRemaining: TimerStore.getSecondsRemaining(),
-      isDone: TimerStore.isDone()
-    };
-  },
-
-  _onChange: function() {
-    this.setState(this._loadState());
   }
 
 });
