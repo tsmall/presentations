@@ -12,10 +12,17 @@ const images = {
   flux2: require("./images/flux.002.jpg"),
   flux3: require("./images/flux.003.jpg"),
   flux4: require("./images/flux.004.jpg"),
-  flux5: require("./images/flux.005.jpg")
+  flux5: require("./images/flux.005.jpg"),
+  mvc1: require("./images/mvc.001.jpg"),
+  mvc2: require("./images/mvc.002.jpg"),
+  mvc3: require("./images/mvc.003.jpg"),
+  mvc4: require("./images/mvc.004.jpg")
 };
 
-preloader([images.flux1, images.flux2, images.flux3, images.flux4]);
+preloader([
+  images.flux1, images.flux2, images.flux3, images.flux4,
+  images.mvc1, images.mvc2, images.mvc3, images.mvc4
+]);
 
 // Live Examples
 var TimerApp = require("./live/timer/views/app");
@@ -211,6 +218,24 @@ export default class extends React.Component {
         </Slide>
         <Slide>
           <Image src={images.flux5.replace('/', '')} width="1600px"/>
+        </Slide>
+
+        <Slide>
+          <Heading size={1}>
+            Compared to <S type="bold" color="yellow">MVC</S>
+          </Heading>
+        </Slide>
+        <Slide>
+          <Image src={images.mvc1.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.mvc2.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.mvc3.replace('/', '')} width="1600px"/>
+        </Slide>
+        <Slide>
+          <Image src={images.mvc4.replace('/', '')} width="1600px"/>
         </Slide>
 
         <Slide notes="Let's walk through a simple example.<br/>App that counts down from 5 seconds.<br/>Will go through all four parts.">
