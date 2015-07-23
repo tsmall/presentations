@@ -1,13 +1,17 @@
 var assign = require('object-assign');
-
 var ActionConstants = require('../constants/actions.js');
 var AppDispatcher = require('../dispatchers/appdispatcher.js');
 var BaseStore = require('./base.js');
 var PomodoroStore = require('./pomodoro.js');
 
+// State ---------------------------------------------------------
+
 var secondsRemaining = 0;
 var isDone = false;
+
 var intervalHandle = null;
+
+// Helpers -------------------------------------------------------
 
 function startTimer() {
   intervalHandle = window.setInterval(tick, 1000);
@@ -30,6 +34,8 @@ function tick() {
   TimerStore.emitChange();
 }
 
+// Public API ----------------------------------------------------
+
 var TimerStore = assign({}, BaseStore, {
 
   getSecondsRemaining: function() {
@@ -41,6 +47,8 @@ var TimerStore = assign({}, BaseStore, {
   }
 
 });
+
+// Action Handlers -----------------------------------------------
 
 TimerStore.dispatchToken = AppDispatcher.register(function(action) {
   switch (action.type) {

@@ -1,8 +1,9 @@
 var assign = require('object-assign');
-
 var ActionConstants = require('../constants/actions.js');
 var AppDispatcher = require('../dispatchers/appdispatcher.js');
 var BaseStore = require('./base.js');
+
+// State ---------------------------------------------------------
 
 const stageLengths = new Map([
   ["Work", 5],
@@ -11,9 +12,13 @@ const stageLengths = new Map([
 
 var currentStage = "Pomodoro";
 
+// Helpers -------------------------------------------------------
+
 function getNextStage() {
     return (currentStage === "Work") ? "Break" : "Work";
 }
+
+// Public API ----------------------------------------------------
 
 var PomodoroStore = assign({}, BaseStore, {
 
@@ -26,6 +31,8 @@ var PomodoroStore = assign({}, BaseStore, {
   }
 
 });
+
+// Action Handlers -----------------------------------------------
 
 PomodoroStore.dispatchToken = AppDispatcher.register(function(action) {
   switch (action.type) {
