@@ -1,4 +1,3 @@
-var PomodoroStore = require('../stores/pomodoro.js');
 var React = require('react');
 var Timer = require('./timer.jsx');
 

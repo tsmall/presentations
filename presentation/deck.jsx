@@ -309,15 +309,7 @@ export default class extends React.Component {
             <S type="bold" color="blue">Views</S>
           </Heading>
         </Slide>
-        <Slide notes="Changed app to use <code>PomodoroTimer</code>.<br/>Trigger Pomodoro actions.">
-         <Text textAlign="left">
-            <pre>views/app.jsx</pre>
-          </Text>
-          <CodePane
-            lang="javascript"
-            source={require("raw!./examples/pomodoro/views/app.example")}/>
-        </Slide>
-        <Slide notes="New <code>PomodoroTimer</code> view.<br/>Basically same as <code>Timer</code> view.<br/>Listens to store.">
+        <Slide notes="New <code>PomodoroTimer</code> view.<br/>Wraps <code>Timer</code> view.">
          <Text textAlign="left">
             <pre>views/pomodoro.jsx</pre>
           </Text>
@@ -325,31 +317,39 @@ export default class extends React.Component {
             lang="javascript"
             source={require("raw!./examples/pomodoro/views/pomodoro.example")}/>
         </Slide>
+        <Slide notes="Gets additional state from <code>PomodoroStore</code>.<br/>Changed to use <code>PomodoroTimer</code>.">
+         <Text textAlign="left">
+            <pre>views/app.jsx</pre>
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/pomodoro/views/app.example")}/>
+        </Slide>
         <Slide>
           <Heading size={1}>
             <S type="bold" color="yellow">Actions</S>
           </Heading>
-        </Slide>
-        <Slide notes="Now there are two new things you can do.<br/>So we added two new actions.">
-         <Text textAlign="left">
-            <pre>actions/pomodoro.js</pre>
-          </Text>
-          <CodePane
-            lang="javascript"
-            source={require("raw!./examples/pomodoro/actions/pomodoro.example")}/>
         </Slide>
         <Slide>
           <Heading size={1}>
             <S type="bold" color="orange">Stores</S>
           </Heading>
         </Slide>
-        <Slide notes="New store for Pomodoro logic.<br/>State: <code>currentStage</code><br/>Public API: <code>PomodoroStore</code><br/>Waits for <code>TimerStore</code>.<br/>Uses <code>defer()</code> to trigger actions.">
+        <Slide notes="New store for Pomodoro logic.<br/>State: <code>currentStage</code><br/>Public API: <code>PomodoroStore</code><br/>Changes stages when timer is reset.">
          <Text textAlign="left">
             <pre>stores/pomodoro.js</pre>
           </Text>
           <CodePane
             lang="javascript"
             source={require("raw!./examples/pomodoro/stores/pomodoro.example")}/>
+        </Slide>
+        <Slide notes="Gets timer length from <code>PomodoroStore</code>.<br/>Uses <code>waitFor()</code>.">
+         <Text textAlign="left">
+            <pre>stores/timer.js</pre>
+          </Text>
+          <CodePane
+            lang="javascript"
+            source={require("raw!./examples/pomodoro/stores/timer.example")}/>
         </Slide>
         <Slide>
           <Heading size={1}>
@@ -366,7 +366,7 @@ export default class extends React.Component {
           </Heading>
           <List>
             <ListItem><Appear>Most of the existing code was left alone</Appear></ListItem>
-            <ListItem><Appear>Only views changed</Appear></ListItem>
+            <ListItem><Appear>Only two small changes</Appear></ListItem>
             <ListItem><Appear>Stores can depend on each other</Appear></ListItem>
           </List>
         </Slide>

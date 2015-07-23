@@ -1,5 +1,5 @@
 module.exports = {
-  SET_TIMER: 'SET_TIMER',
+  RESET_TIMER: 'RESET_TIMER',
   START_TIMER: 'START_TIMER',
   STOP_TIMER: 'STOP_TIMER'
 };

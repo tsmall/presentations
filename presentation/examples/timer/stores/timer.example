@@ -43,9 +43,9 @@ var TimerStore = assign({}, BaseStore, {
 
 TimerStore.dispatchToken = AppDispatcher.register(function(action) {
   switch (action.type) {
-    case ActionConstants.SET_TIMER:
+    case ActionConstants.RESET_TIMER:
       stopTimer();
-      secondsRemaining = action.seconds;
+      secondsRemaining = 5;
       isDone = false;
       TimerStore.emitChange();
       break;

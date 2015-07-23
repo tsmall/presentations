@@ -1,4 +1,3 @@
-var PomodoroActions = require('../actions/pomodoro.js');
 var PomodoroStore = require('../stores/pomodoro.js');
 var PomodoroTimer = require('./pomodoro.jsx');
 var React = require('react');
@@ -55,7 +54,7 @@ var PomodoroApp = React.createClass({
   // Actions -----------------------------------------------------
 
   _startTimer: function() {
-    PomodoroActions.startPomodoro();
+    TimerActions.startTimer();
   },
 
   _stopTimer: function() {
@@ -63,7 +62,7 @@ var PomodoroApp = React.createClass({
   },
 
   _resetTimer: function() {
-    PomodoroActions.resetPomodoro();
+    TimerActions.resetTimer();
   }
 
 });

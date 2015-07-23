@@ -3,10 +3,9 @@ var AppDispatcher = require('../dispatchers/appdispatcher.js');
 
 module.exports = {
 
-  setTimer: function(seconds) {
+  resetTimer: function() {
     AppDispatcher.dispatch({
-      type: ActionConstants.SET_TIMER,
-      seconds: seconds
+      type: ActionConstants.RESET_TIMER
     });
   },
 
@@ -19,12 +18,6 @@ module.exports = {
   stopTimer: function() {
     AppDispatcher.dispatch({
       type: ActionConstants.STOP_TIMER
-    });
-  },
-
-  timerStopped: function() {
-    AppDispatcher.dispatch({
-      type: ActionConstants.TIMER_STOPPED
     });
   }
 

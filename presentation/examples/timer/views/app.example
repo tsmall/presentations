@@ -57,7 +57,7 @@ var TimerApp = React.createClass({
   },
 
   _resetTimer: function() {
-    TimerActions.setTimer(5);
+    TimerActions.resetTimer();
   }
 
 });
