@@ -1,5 +1,0 @@
-module.exports = {
-  RESET_TIMER: 'RESET_TIMER',
-  START_TIMER: 'START_TIMER',
-  STOP_TIMER: 'STOP_TIMER'
-};
